@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb+srv://49dollars:admin123@cluster0.8w8e8xv.mongodb.net/userDB');
+  await mongoose.connect(process.env.URL);
 }
 
 const userSchema = new mongoose.Schema({
